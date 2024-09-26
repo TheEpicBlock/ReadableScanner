@@ -10,6 +10,26 @@
   <name>readable-scanner</name>
   <url>https://github.com/TheEpicBlock/readable-scanner</url>
 
+  <developers>
+    <developer>
+      <name>TheEpicBlock</name>
+      <url>https://theepicblock.nl</url>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/TheEpicBlock/readable-scanner.git</connection>
+    <developerConnection>scm:git:ssh://github.com:TheEpicBlock/readable-scanner.git</developerConnection>
+    <url>http://github.com/simpligility/ossrh-demo/tree/master</url>
+  </scm>
+
+  <licenses>
+    <license>
+      <name>MPL-2.0</name>
+      <url>https://mozilla.org/MPL/2.0/</url>
+    </license>
+  </licenses>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>15</maven.compiler.release>
@@ -92,6 +112,32 @@
           <source>15</source>
           <target>15</target>
         </configuration>
+      </plugin>
+      <!--To generate, run license:remove followed by license:format-->
+      <plugin>
+        <groupId>com.mycila</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>4.6</version>
+        <configuration>
+          <licenseSets>
+            <licenseSet>
+              <inlineHeader>This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at https://mozilla.org/MPL/2.0/.</inlineHeader>
+              <includes>
+                <include>src/**</include>
+              </includes>
+            </licenseSet>
+          </licenseSets>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
