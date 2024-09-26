@@ -5,7 +5,7 @@
 
   <groupId>nl.theepicblock.scanner</groupId>
   <artifactId>readable-scanner</artifactId>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
 
   <name>readable-scanner</name>
   <url>https://github.com/TheEpicBlock/readable-scanner</url>
@@ -59,6 +59,14 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>teb</id>
+      <name>TheEpicBlock's maven</name>
+      <url>https://maven.theepicblock.nl</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <pluginManagement>
