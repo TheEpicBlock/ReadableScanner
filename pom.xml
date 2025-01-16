@@ -20,7 +20,7 @@
   <scm>
     <connection>scm:git:git://github.com/TheEpicBlock/readable-scanner.git</connection>
     <developerConnection>scm:git:ssh://github.com:TheEpicBlock/readable-scanner.git</developerConnection>
-    <url>http://github.com/simpligility/ossrh-demo/tree/master</url>
+    <url>http://github.com/TheEpicBlock/readable-scanner/tree/master</url>
   </scm>
 
   <licenses>
